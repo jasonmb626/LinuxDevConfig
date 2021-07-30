@@ -97,6 +97,10 @@ You'll need to install the browser plugin (it'll prompt you) and then refresh th
 
 #### Enable [Workspaces Bar](https://extensions.gnome.org/extension/3851/workspaces-bar/)
 
+#### Enable [Workspace Switch Wraparound](https://extensions.gnome.org/extension/1116/workspace-switch-wraparound/)
+
+#### Enable [Compiz alike magic lamp effect](https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/)
+
 ## Download your preferred theme
 
 [Nordic GTK3 theme](https://www.gnome-look.org/p/1267246/)
@@ -129,6 +133,7 @@ sudo usermomd -aG docker jason
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
+
 ### Setup Alacritty
 
 #### Install Theme
@@ -299,9 +304,11 @@ TODO: Do we need Prettier extension if ESLint is configured to use prettier?
 - Thunder Client (Ranga Vadhineni)
 
 ### Replace Nord comment color
-Open ~/.vscode/extensions/arcticicestudio.nord-visual-studio-code-0.15.1/themes/nord-color-theme.json 
 
-Change comment color to 
+Open ~/.vscode/extensions/arcticicestudio.nord-visual-studio-code-0.15.1/themes/nord-color-theme.json
+
+Change comment color to
+
 ```json
 {
   "name": "Comment",
@@ -555,10 +562,9 @@ screenkey -p fixed -g 325x50-5+5 --key-mode composed --bak-mode normal --mods-mo
 ### Postgres via docker
 
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
-
   db:
     image: postgres
     restart: always
@@ -579,6 +585,7 @@ services:
     ports:
       - 8080:80
 ```
+
 Start the containers (--build makes sure it rebuilds the containers if anything changed)
 
 ```sh
@@ -598,11 +605,11 @@ docker exec -it docker_db_1 /usr/bin/psql -U postgres
 ```
 
 Create and connect to database
+
 ```sql
   CREATE DATABASE project_name;
   \c project_name;
 ```
-
 
 Create a role
 
@@ -628,8 +635,10 @@ INSERT INTO test VALUES(default, 'Hi', 'There');
 ```
 
 ### Set your environment variables
+
 TODO: how to set for local user only? Not SHELL variables but proper user environment variables
 putting these in ~/.pam_environment works in Ubuntu (and ARCH)
+
 ```sh
 sudo nvim /etc/profile
 ```
