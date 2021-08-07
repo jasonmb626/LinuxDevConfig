@@ -254,7 +254,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.zsh-nvm/zsh-nvm.plugin.zsh ]] || source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 ```
 
-Exit terminal and reopen
+Exit terminal and reopen. It'll give a bit of an error but that's okay. It's a one-time error.
 
 ### Install Node LTS
 
@@ -295,7 +295,7 @@ TODO: Do we need Prettier extension if ESLint is configured to use prettier?
 - Bracket Pair Colorizer 2 (CoenraadS)
 - ESLint (Dirk Baemuer)
 - Prettier (Prettier)
-- Nord (arcticstudio)
+- Nord Deep (Marlos Irapuan)
 - vscode-icons (VSCode Icons Team)
 - Docker (Microsoft)
 - Deno
@@ -303,48 +303,18 @@ TODO: Do we need Prettier extension if ESLint is configured to use prettier?
 - File Utils (Steffen Leistner)
 - Thunder Client (Ranga Vadhineni)
 
-### Replace Nord comment color
-
-Open ~/.vscode/extensions/arcticicestudio.nord-visual-studio-code-0.15.1/themes/nord-color-theme.json
-
-Change comment color to
-
-```json
-{
-  "name": "Comment",
-  "scope": "comment",
-  "settings": {
-    "foreground": "#B48EAD"
-  }
-},
-```
-
-```json
-{
-  "name": "Punctuation Definition Comment",
-  "scope": [
-    "punctuation.definition.comment",
-    "punctuation.end.definition.comment",
-    "punctuation.start.definition.comment"
-  ],
-  "settings": {
-    "foreground": "#B48EAD"
-  }
-},
-```
-
 #### Configure settings.json
 
 ```json
 {
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Nord Deep",
   "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "terminal.integrated.fontFamily": "Courier, 'MesloLGS NF'",
   "vim.camelCaseMotion.enable": true,
   "vim.leader": "<space>",
   "vim.replaceWithRegister": true,
-  "vim.useSystemClipboard": true,
+  "vim.useSystemClipboard": false,
   "vim.useCtrlKeys": true,
   "vim.handleKeys": {
     "<C-v>": false,
@@ -542,7 +512,18 @@ File -> Preferences -> User Snippets -> JavaScript
 	}
 ```
 
+### Install Docker Compose
+
+```sh
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+From this (link)[https://docs.docker.com/compose/install/]
+
 ### Install Screenkey
+
+sudo chmod +x /usr/local/bin/docker-compose
 
 ```sh
 sudo dnf install screenkey
