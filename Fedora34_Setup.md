@@ -627,12 +627,12 @@ sudo nvim /etc/profile
 Add to the bottom
 
 ```
-PGUSER=app
-PGPASSWORD=123456
-PGHOST=localhost
-PGPORT=5432
-PGDATABASE=project_name
-DATABASE_URL=postgres://${PGUSER}@${PGHOST}:${PGPORT}/${PGDATABASE}
+export PGUSER=app
+export PGPASSWORD=123456
+export PGHOST=localhost
+export PGPORT=5432
+export PGDATABASE=project_name
+export DATABASE_URL=postgres://${PGUSER}@${PGHOST}:${PGPORT}/${PGDATABASE}
 ```
 
 Log out and log back in
