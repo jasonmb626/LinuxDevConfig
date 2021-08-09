@@ -318,6 +318,7 @@ TODO: Do we need Prettier extension if ESLint is configured to use prettier?
   "vim.useCtrlKeys": true,
   "vim.handleKeys": {
     "<C-v>": false,
+    "<C-x>": false,
     "<C-s>": false,
     "<C-a>": false,
     "<C-c>": false,
@@ -459,7 +460,8 @@ TODO: Do we need Prettier extension if ESLint is configured to use prettier?
         }
       ]
     }
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
 
