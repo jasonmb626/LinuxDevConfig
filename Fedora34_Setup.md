@@ -302,6 +302,7 @@ TODO: Do we need Prettier extension if ESLint is configured to use prettier?
 - advanced-new-file (patbenatar)
 - File Utils (Steffen Leistner)
 - Thunder Client (Ranga Vadhineni)
+- Jest Runner (firsttris)
 
 #### Configure settings.json
 
